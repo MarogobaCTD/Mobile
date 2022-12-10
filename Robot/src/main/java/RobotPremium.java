@@ -1,8 +1,10 @@
+package main.java;
+
 import java.awt.*;
 import java.util.Scanner;
-import java.net.URL;
 import javax.swing.*;
 import javax.sound.sampled.*;
+import java.io.*;
 
 public class RobotPremium extends RobotMarciano implements Acao {
     public static final String ANSI_RESET = "\u001B[40m";
@@ -21,14 +23,14 @@ public class RobotPremium extends RobotMarciano implements Acao {
         Scanner acao = new Scanner(System.in);
         int numero;
         System.out.println("Escolha uma das ações abaixo:");
-        System.out.println("[1] - Contar; [2] - Falar; [3] - Pintar; [4] - Mover");
+        System.out.println("[1] - Contar; [2] - Tocar; [3] - Pintar; [4] - Mover");
         numero = acao.nextInt();
         switch (numero) {
             case 1:
                 Contar();
                 break;
             case 2:
-                Cantar();
+                Tocar();
                 break;
             case 3:
                 Pintar();
@@ -43,7 +45,7 @@ public class RobotPremium extends RobotMarciano implements Acao {
     }
 
     @Override
-    public void Cantar() {
+    public void Tocar() throws LineUnavailableException, UnsupportedAudioFileException, IOException {
         String musica = "./lvb-sym-5-1.wav";
         InputStream input = getClass().getResourceAsStream(musica);
         Clip oClip = AudioSystem.getClip();

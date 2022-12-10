@@ -1,3 +1,5 @@
+package main.java;
+
 public class RobotBasico extends RobotMarciano{
 
     public RobotBasico(String mensagem) {
