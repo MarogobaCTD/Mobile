@@ -35,15 +35,6 @@ class robo_response : AppCompatActivity() {
             val intent = Intent(this, OperacoesMatematicas::class.java);
             intent.putExtra(EXTRA_MESSAGE, operacao);
             startActivityForResult(intent, TEXT_REQUEST);
-
-           // val oper1 = list[1]
-          //  val oper2 = list[2]
-         //   if (isNumber(oper1.toString()) && isNumber(oper2.toString())) {
-           //     val avancado = MarcianoAvancado()
-           //     resposta = avancado.responda(operacao, oper1.toDouble(), oper2.toDouble())
-          //  } else {
-           //     resposta = "Operadores inválidos!"
-          //  }
         } else if (mensagem.toString().indexOf(AGIR) == 0) {
             val premium = MarcianoPremium(acao)
             resposta = premium.responda(mensagem.toString())
@@ -56,15 +47,6 @@ class robo_response : AppCompatActivity() {
 
     fun voltar(view: View) {
         finish()
-    }
-
-    fun isNumber(s: String): Boolean {
-        return try {
-            s.toInt()
-            true
-        } catch (ex: NumberFormatException) {
-            false
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
