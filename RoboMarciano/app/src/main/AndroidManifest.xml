@@ -13,6 +13,13 @@
         android:theme="@style/Theme.RoboMarciano"
         tools:targetApi="31">
         <activity
+            android:name=".OperacoesMatematicas"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".robo_response"
             android:exported="false"
             android:label="@string/title_activity_robo_response"
@@ -20,8 +27,7 @@
             android:theme="@style/Theme.RoboMarciano.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.example.robomarciano.MainActivity" />
+                android:value="com.example.robomarciano.MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
@@ -30,6 +36,7 @@
             android:theme="@style/Theme.RoboMarciano.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
