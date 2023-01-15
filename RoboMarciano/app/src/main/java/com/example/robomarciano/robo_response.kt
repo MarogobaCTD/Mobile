@@ -23,9 +23,8 @@ class robo_response : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView_mensagem)
         val acao = MarcianoAcao()
 
-        if (mensagem.toString().indexOf(SOME) == 0 || mensagem.toString().indexOf(SUBTRAIA) == 0 || mensagem.toString().indexOf(
-                MULTIPLIQUE
-            ) == 0 || mensagem.toString().indexOf(DIVIDA) == 0
+        if (mensagem.toString().indexOf(SOME) == 0 || mensagem.toString().indexOf(SUBTRAIA) == 0 ||
+            mensagem.toString().indexOf(MULTIPLIQUE) == 0 || mensagem.toString().indexOf(DIVIDA) == 0
         ) {
             val delim = " "
             val list = mensagem.toString().split(delim)
@@ -60,6 +59,5 @@ class robo_response : AppCompatActivity() {
             false
         }
     }
-
 
 }
