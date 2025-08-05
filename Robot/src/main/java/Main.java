@@ -20,7 +20,7 @@ public class Main {
             try{
                 resposta = leia.nextLine();
                 if (!resposta.toUpperCase().equals("FIM")) {
-                    robo.chamarRobot(resposta);
+                    'robo'.chamarRobot(resposta);
                 }
 
             } catch (Exception e){
