@@ -7,3 +7,4 @@ open class MarcianoPremium(val acao: MarcianoInterface): MarcianoAvancado() {
         } else super.responda(comando)
     }
 }
+

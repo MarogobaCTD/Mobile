@@ -40,6 +40,4 @@ class OperacoesMatematicas : AppCompatActivity() {
         setResult(RESULT_OK, replyIntent)
         finish()
     }
-
-
 }

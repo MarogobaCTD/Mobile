@@ -59,5 +59,4 @@ class robo_response : AppCompatActivity() {
             }
         }
     }
-
 }
